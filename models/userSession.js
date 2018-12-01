@@ -1,17 +1,17 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const userSession = new mongoose.Schema({
   routes: [
     {
       visitAt: Date,
-      name: String,
-    },
+      name: String
+    }
   ],
-  meanStepDutation: Number,
+  meanStepDuration: Number,
   sessionDuration: Number,
-  user: mongoose.Schema.Types.ObjectId,
+  user: mongoose.Schema.Types.ObjectId
 });
 
-const UserSession = mongoose.model('UserSession', userSession);
+const UserSession = mongoose.model("UserSession", userSession);
 
 module.exports = UserSession;
